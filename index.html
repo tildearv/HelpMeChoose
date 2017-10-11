@@ -2,17 +2,31 @@
 <html lang=en>
     <head>
         <meta charset=utf-8>
+        <link href="./style.css" rel="stylesheet" type="text/css">
         <title>Help me choose!</title>
-        <h1>Help me choose between..</h1>
-        <div>
-          <div>
-            <input placeholder="Type here"></input>
-          </div>
-          <button>Add</button>
-        </div>
-        <button>Go!</button>
     </head>
     <body>
+      <h1>Help me choose between..</h1>
+        <div class="inputSection">
+          <div class="inputs">
+            <input placeholder="Type here"></input>
+          </div>
+          <button class="addInput">Add</button>
+        </div>
+        <div class="resultSection"></div>
+        <button class="runButton">Go!</button>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script>
+          $(function() {
+          $('.resultSection').hide()
+          var add_input = function() {
+            $('.inputs').append('<input placeholder="Type here"></input>')
+          }
+          $('.addInput').click(add_input)
+        })
+        </script>
+
     </body>
 
 </html>
