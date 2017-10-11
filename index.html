@@ -23,7 +23,11 @@
           var add_input = function() {
             $('.inputs').append('<input placeholder="Type here"></input>')
           }
-          $('.addInput').click(add_input)
+          var change_color = function() {
+            $(this).css('color', '#FFD700');
+          }
+          $('.addInput').click(add_input);
+          $('h1').click(change_color);
         })
         </script>
 
