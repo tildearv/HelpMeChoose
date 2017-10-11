@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    background-color: #b9ecfc;
+}
+
+h1 {
+    letter-spacing: 3px;
+    color: #fcc9b9;
+}
+
+.inputSection{
+    width: 400px;
+}
+
+.inputs{
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-top: 10px;
+}
+
+button{
+    border: none;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.runButton {
+    background-color: pink;
+}
+
+.addInput{
+    background-color: #f1cbff;
+    margin-top: 10px;
+    margin-left: 10px;
+}
