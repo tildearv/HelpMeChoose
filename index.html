@@ -6,7 +6,7 @@
         <title>Help me choose!</title>
     </head>
     <body>
-      <h1>Help me choose between..</h1>
+      <h1 id=headline>Help me choose between..</h1>
         <div class="inputSection">
           <div class="inputs">
             <input placeholder="Type here"></input>
@@ -17,18 +17,34 @@
         <button class="runButton">Go!</button>
 
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
         <script>
           $(function() {
-          $('.resultSection').hide()
-          var add_input = function() {
-            $('.inputs').append('<input placeholder="Type here"></input>')
-          }
-          var change_color = function() {
-            $(this).css('color', '#FFD700');
-          }
-          $('.addInput').click(add_input);
-          $('h1').click(change_color);
-        })
+            $('.resultSection').hide()
+            var add_option = function() {
+              $('.inputs').append('<input placeholder="Type here"></input>')
+            }
+            $('.addInput').click(add_option)
+            var options = []
+            var submit = function() {
+              $('.inputSection').hide()
+              $('.resultSection').css('display', 'flex')
+              $('input').each(function() {
+                options.push($(this).val())
+              })
+
+              var index = options[Math.floor(Math.random() * options.length)]
+              console.log(index)
+              document.getElementById("headline").innerHTML = "And the winner is...";
+              $('.resultSection').text(index)
+            }
+            $('.runButton').click(submit)
+
+            var change_color = function() {
+              $(this).css('color', '#FFD700');
+            }
+            $('h1').click(change_color)
+          })
         </script>
 
     </body>
