@@ -30,7 +30,9 @@
               $('.inputSection').hide()
               $('.resultSection').css('display', 'flex')
               $('input').each(function() {
-                options.push($(this).val())
+                if($(this).val() != ""){
+                  options.push($(this).val())
+                }
               })
 
               var index = options[Math.floor(Math.random() * options.length)]
